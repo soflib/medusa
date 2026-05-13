@@ -1,0 +1,58 @@
+2026-05-12T00:56:20.246011Z  INFO security_core: security-core starting version="0.1.0" log_dir=logs
+2026-05-12T00:56:22.330638Z  WARN sqlx::pool::acquire: acquired connection, but time to acquire exceeded slow threshold aquired_after_secs=2.0833246 slow_acquire_threshold_secs=2.0
+2026-05-12T00:56:22.330688Z  INFO security_core: database pool ready
+2026-05-12T00:56:22.331276Z  INFO security_core::service::token: PASETO keys loaded
+2026-05-12T00:56:22.331599Z  INFO security_core::security::revocation_store: revocation store loaded count=0 path=./security/revoked_tokens.enc
+2026-05-12T00:56:22.331633Z  INFO security_core::service::secrets: tenant secrets key loaded
+2026-05-12T00:56:22.331647Z  INFO security_core: gRPC server ready addr=0.0.0.0:50051
+2026-05-12T00:56:22.331653Z  WARN security_core: running in insecure dev mode — no mTLS
+2026-05-12T00:56:22.331659Z  INFO security_core::infrastructure::grpc::server: gRPC server listening on 0.0.0.0:50051 (insecure)
+2026-05-12T01:00:12.517678Z  WARN sqlx::pool::acquire: acquired connection, but time to acquire exceeded slow threshold aquired_after_secs=2.0808078 slow_acquire_threshold_secs=2.0
+2026-05-12T01:00:12.542890Z  INFO security_core::service::auth: login successful user_id=6fa5416c-2f8f-4984-b894-4fdf337d577a email=string@string.com
+2026-05-12T01:00:16.890034Z  INFO security_core::infrastructure::grpc::handler: get_all_users completed total=3
+2026-05-12T01:00:16.897158Z  INFO security_core::infrastructure::grpc::handler: get_all_users completed total=3
+2026-05-12T01:00:19.591029Z  INFO security_core::infrastructure::grpc::handler: user lock toggled user_id=aeb0d8e7-7e49-44ce-a131-2bae4b5767f3 lock=true
+2026-05-12T01:00:19.598072Z  INFO security_core::infrastructure::grpc::handler: get_all_users completed total=3
+2026-05-12T01:00:22.676128Z  INFO security_core::infrastructure::grpc::handler: user lock toggled user_id=aeb0d8e7-7e49-44ce-a131-2bae4b5767f3 lock=false
+2026-05-12T01:00:22.683203Z  INFO security_core::infrastructure::grpc::handler: get_all_users completed total=3
+2026-05-12T01:00:28.223971Z  INFO security_core::infrastructure::grpc::handler: user lock toggled user_id=aeb0d8e7-7e49-44ce-a131-2bae4b5767f3 lock=true
+2026-05-12T01:00:28.231364Z  INFO security_core::infrastructure::grpc::handler: get_all_users completed total=3
+2026-05-12T01:00:29.710217Z  INFO security_core::infrastructure::grpc::handler: user lock toggled user_id=aeb0d8e7-7e49-44ce-a131-2bae4b5767f3 lock=false
+2026-05-12T01:00:29.716778Z  INFO security_core::infrastructure::grpc::handler: get_all_users completed total=3
+2026-05-12T21:35:57.683657Z  INFO security_core: security-core starting version="0.1.0" log_dir=logs
+2026-05-12T21:35:59.774323Z  WARN sqlx::pool::acquire: acquired connection, but time to acquire exceeded slow threshold aquired_after_secs=2.0892324 slow_acquire_threshold_secs=2.0
+2026-05-12T21:35:59.774369Z  INFO security_core: database pool ready
+2026-05-12T21:35:59.774928Z  INFO security_core::service::token: PASETO keys loaded
+2026-05-12T21:35:59.775199Z  INFO security_core::security::revocation_store: revocation store loaded count=0 path=./security/revoked_tokens.enc
+2026-05-12T21:35:59.775228Z  INFO security_core::service::secrets: tenant secrets key loaded
+2026-05-12T21:35:59.775240Z  INFO security_core: gRPC server ready addr=0.0.0.0:50051
+2026-05-12T21:35:59.775247Z  WARN security_core: running in insecure dev mode — no mTLS
+2026-05-12T21:35:59.775253Z  INFO security_core::infrastructure::grpc::server: gRPC server listening on 0.0.0.0:50051 (insecure)
+2026-05-12T22:53:17.306742Z  WARN sqlx::pool::acquire: acquired connection, but time to acquire exceeded slow threshold aquired_after_secs=2.0643688 slow_acquire_threshold_secs=2.0
+2026-05-12T22:53:19.806166Z  WARN sqlx::pool::acquire: acquired connection, but time to acquire exceeded slow threshold aquired_after_secs=2.0765997 slow_acquire_threshold_secs=2.0
+2026-05-12T22:53:19.830328Z  INFO security_core::service::auth: login successful user_id=6fa5416c-2f8f-4984-b894-4fdf337d577a email=string@string.com
+2026-05-12T22:53:58.742777Z  INFO security_core::service::secrets: secret created tenant_id=b72fbfd4-1a72-4339-b7ab-3dca68707f3d
+2026-05-12T22:53:58.746207Z  INFO security_core::service::secrets: secret created tenant_id=b72fbfd4-1a72-4339-b7ab-3dca68707f3d
+2026-05-12T22:53:58.746237Z  INFO security_core::infrastructure::grpc::handler: shared-db tenant schema provisioned tenant_id=b72fbfd4-1a72-4339-b7ab-3dca68707f3d schema=t_b72fbfd41a724339b7ab3dca68707f3d
+2026-05-12T22:53:59.126919Z  INFO security_core::infrastructure::grpc::handler: user registered user_id=61565cc3-11f9-4cf0-81e9-aeaec130ba1b
+2026-05-12T22:54:22.714745Z  INFO security_core::service::auth: login successful user_id=61565cc3-11f9-4cf0-81e9-aeaec130ba1b email=f1@f1.com
+2026-05-12T22:54:59.546648Z  INFO security_core::service::auth: login successful user_id=6fa5416c-2f8f-4984-b894-4fdf337d577a email=string@string.com
+2026-05-12T22:57:18.419622Z  INFO security_core::infrastructure::grpc::handler: get_all_users completed total=3
+2026-05-12T22:57:18.426844Z  INFO security_core::infrastructure::grpc::handler: get_all_users completed total=3
+2026-05-12T22:57:33.542807Z  INFO security_core::service::auth: login successful user_id=61565cc3-11f9-4cf0-81e9-aeaec130ba1b email=f1@f1.com
+2026-05-12T22:57:41.291169Z  INFO security_core::infrastructure::grpc::handler: get_all_users completed total=1
+2026-05-12T22:57:41.297302Z  INFO security_core::infrastructure::grpc::handler: get_all_users completed total=1
+2026-05-12T23:03:50.453319Z  INFO security_core::infrastructure::grpc::handler: get_all_users completed total=1
+2026-05-12T23:03:50.458851Z  INFO security_core::infrastructure::grpc::handler: get_all_users completed total=1
+2026-05-12T23:04:03.445874Z  INFO security_core::infrastructure::grpc::handler: get_all_users completed total=1
+2026-05-12T23:04:03.451920Z  INFO security_core::infrastructure::grpc::handler: get_all_users completed total=1
+2026-05-12T23:04:21.795857Z  INFO security_core::infrastructure::grpc::handler: sub-user registered user_id=269930ca-219c-4cb9-9acc-baf85452c655 tenant_id=b72fbfd4-1a72-4339-b7ab-3dca68707f3d
+2026-05-12T23:04:21.803192Z  INFO security_core::infrastructure::grpc::handler: get_all_users completed total=2
+2026-05-12T23:04:35.751769Z  INFO security_core::infrastructure::grpc::handler: user lock toggled user_id=269930ca-219c-4cb9-9acc-baf85452c655 lock=true
+2026-05-12T23:04:35.759903Z  INFO security_core::infrastructure::grpc::handler: get_all_users completed total=2
+2026-05-12T23:04:36.676869Z  INFO security_core::infrastructure::grpc::handler: user lock toggled user_id=269930ca-219c-4cb9-9acc-baf85452c655 lock=false
+2026-05-12T23:04:36.684081Z  INFO security_core::infrastructure::grpc::handler: get_all_users completed total=2
+2026-05-12T23:55:39.504452Z  WARN security_core::service::token: access token rejected: invalid signature or expired
+2026-05-12T23:55:39.504508Z  WARN security_core::infrastructure::grpc::handler: validate_token rejected error=token error: token is invalid or expired
+2026-05-12T23:55:39.506504Z  WARN security_core::service::token: access token rejected: invalid signature or expired
+2026-05-12T23:55:39.506535Z  WARN security_core::infrastructure::grpc::handler: validate_token rejected error=token error: token is invalid or expired

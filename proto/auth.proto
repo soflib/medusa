@@ -1,0 +1,286 @@
+// proto/auth.proto
+syntax = "proto3";
+package auth;
+
+service AuthService {
+    // Identidad
+    rpc Register        (RegisterRequest)       returns (AuthResponse);
+    rpc Login           (LoginRequest)          returns (AuthResponse);
+    rpc Logout          (LogoutRequest)         returns (LogoutResponse);
+
+    // Tokens
+    rpc RefreshToken    (RefreshRequest)        returns (AuthResponse);
+    rpc ValidateToken   (ValidateRequest)       returns (ValidateResponse);
+
+    // Sesiones
+    rpc RevokeSessions  (RevokeSessionsRequest) returns (RevokeSessionsResponse);
+
+    // Credenciales
+    rpc ChangePassword  (ChangePasswordRequest) returns (ChangePasswordResponse);
+
+    // Users
+    rpc GetAllUsers     (GetAllUsersRequest)    returns (GetAllUsersResponse);
+    rpc GetUser         (GetUserRequest)        returns (UserDetailResponse);
+    rpc DeleteUser      (DeleteUserRequest)     returns (DeleteUserResponse);
+    rpc UpdateUser      (UpdateUserRequest)     returns (UserDetailResponse);
+    rpc LockUser        (LockUserRequest)       returns (LockUserResponse);
+    rpc CheckUsername       (CheckUsernameRequest)    returns (CheckUsernameResponse);
+    rpc GetUserByUsername   (GetByUsernameRequest)    returns (UserDetailResponse);
+
+    // Tenants
+    rpc CreateTenant    (CreateTenantRequest)   returns (TenantResponse);
+    rpc GetTenant       (GetTenantRequest)      returns (TenantResponse);
+    rpc UpdateTenant    (UpdateTenantRequest)   returns (TenantResponse);
+    rpc DeleteTenant    (DeleteTenantRequest)   returns (DeleteTenantResponse);
+    rpc ListTenants     (ListTenantsRequest)    returns (ListTenantsResponse);
+
+    // Tenant Secrets
+    rpc SetTenantDbUrl  (SetTenantDbUrlRequest)  returns (SetTenantDbUrlResponse);
+    rpc GetTenantDbUrl  (GetTenantDbUrlRequest)  returns (GetTenantDbUrlResponse);
+}
+
+// ── Register ─────────────────────────────────────────────────────────────
+
+message RegisterRequest {
+    string email           = 1;
+    string username        = 2;
+    string password        = 3;
+    string full_name       = 4;
+    string phone           = 5;
+    string role            = 6;
+    bool   privat_db       = 7;
+    string payment_id      = 8;
+    string tenant_id       = 9;
+    string payment_plan    = 10;
+    string payment_method  = 11;
+    string billing_period  = 12;
+}
+
+// ── Get All Users ─────────────────────────────────────────────────────────
+
+message GetAllUsersRequest {
+    int32  limit     = 1;
+    int32  offset    = 2;
+    string tenant_id = 3;  // ← add, filter by tenant
+}
+
+// ── Login ─────────────────────────────────────────────────────────────────
+
+message LoginRequest {
+    string email       = 1;
+    string password    = 2;
+    string device_hint = 3;
+    string ip_address  = 4;
+    string user_agent  = 5;
+}
+
+// ── Logout ────────────────────────────────────────────────────────────────
+
+message LogoutRequest {
+    string refresh_jti  = 1;
+    string access_token = 2;
+}
+
+// ── Refresh ───────────────────────────────────────────────────────────────
+
+message RefreshRequest {
+    string refresh_jti = 1;
+    string device_hint = 2;
+}
+
+// ── Validate ──────────────────────────────────────────────────────────────
+
+message ValidateRequest {
+    string access_token = 1;
+}
+
+// ── Revoke sessions ───────────────────────────────────────────────────────
+
+message RevokeSessionsRequest {
+    string user_id         = 1;
+    bool   include_current = 2;
+    string current_jti     = 3;
+}
+
+// ── Change password ───────────────────────────────────────────────────────
+
+message ChangePasswordRequest {
+    string user_id          = 1;
+    string current_password = 2;
+    string new_password     = 3;
+    bool   revoke_sessions  = 4;
+}
+
+// ── Tenant requests ───────────────────────────────────────────────────────
+
+message CreateTenantRequest {
+    string name = 1;
+}
+
+message GetTenantRequest {
+    string tenant_id = 1;
+}
+
+message UpdateTenantRequest {
+    string tenant_id = 1;
+    string name      = 2;
+    string status    = 3;
+}
+
+message DeleteTenantRequest {
+    string tenant_id = 1;
+}
+
+message ListTenantsRequest {
+    int32 limit  = 1;
+    int32 offset = 2;
+}
+
+// ── Responses ─────────────────────────────────────────────────────────────
+
+message TenantResponse {
+    string tenant_id   = 1;
+    string name        = 2;
+    string status      = 3;
+    string created_at  = 4;
+}
+
+message DeleteTenantResponse {
+    bool success = 1;
+}
+
+message ListTenantsResponse {
+    repeated TenantPayload tenants = 1;
+    int32                  total   = 2;
+}
+
+message GetAllUsersResponse {
+    repeated UserPayload users = 1;
+    int32                total = 2;
+}
+
+message AuthResponse {
+    string      access_token      = 1;
+    string      refresh_jti       = 2;
+    uint32      expires_in        = 3;
+    UserPayload user              = 4;
+    string      db_connection_url = 5;
+}
+
+message LogoutResponse {
+    bool success = 1;
+}
+
+message ValidateResponse {
+    bool        valid = 1;
+    UserPayload user  = 2;
+    string      error = 3;
+}
+
+message RevokeSessionsResponse {
+    uint32 sessions_revoked = 1;
+}
+
+message ChangePasswordResponse {
+    bool   success          = 1;
+    uint32 sessions_revoked = 2;
+}
+
+// ── Shared ────────────────────────────────────────────────────────────────
+
+message UserPayload {
+    string user_id      = 1;
+    string email        = 2;
+    string username     = 3;
+    string role         = 4;
+    string status       = 5;
+    string tenant_id    = 6;
+    string full_name    = 7;
+    string locked_until = 8;
+}
+
+// ── User admin ────────────────────────────────────────────────────────────
+
+message GetUserRequest {
+    string user_id = 1;
+}
+
+message DeleteUserRequest {
+    string user_id = 1;
+}
+
+message DeleteUserResponse {
+    bool success = 1;
+}
+
+message UpdateUserRequest {
+    string user_id   = 1;
+    string full_name = 2;
+    string phone     = 3;
+    string role      = 4;
+    string status    = 5;
+}
+
+message LockUserRequest {
+    string user_id  = 1;
+    bool   lock     = 2;
+    int32  minutes  = 3;
+}
+
+message LockUserResponse {
+    bool   success      = 1;
+    string locked_until = 2;
+}
+
+message CheckUsernameRequest {
+    string username = 1;
+}
+
+message GetByUsernameRequest {
+    string username = 1;
+}
+
+message CheckUsernameResponse {
+    bool available = 1;
+}
+
+message UserDetailResponse {
+    string user_id         = 1;
+    string email           = 2;
+    string username        = 3;
+    string full_name       = 4;
+    string phone           = 5;
+    string role            = 6;
+    string status          = 7;
+    string tenant_id       = 8;
+    string last_login_at   = 9;
+    int32  failed_attempts = 10;
+    string locked_until    = 11;
+    string created_at      = 12;
+}
+
+message TenantPayload {
+    string tenant_id  = 1;
+    string name       = 2;
+    string status     = 3;
+    string created_at = 4;
+}
+
+// ── Tenant Secrets ────────────────────────────────────────────────────────────
+
+message SetTenantDbUrlRequest {
+    string tenant_id         = 1;
+    string db_connection_url = 2;
+}
+
+message SetTenantDbUrlResponse {
+    bool success = 1;
+}
+
+message GetTenantDbUrlRequest {
+    string tenant_id = 1;
+}
+
+message GetTenantDbUrlResponse {
+    string db_connection_url = 1;
+}

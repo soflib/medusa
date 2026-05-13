@@ -1,0 +1,9 @@
+2026-05-13T01:43:45.055816Z  INFO security_core: security-core starting version="0.1.0" log_dir=logs
+2026-05-13T01:43:47.133604Z  WARN sqlx::pool::acquire: acquired connection, but time to acquire exceeded slow threshold aquired_after_secs=2.0766429 slow_acquire_threshold_secs=2.0
+2026-05-13T01:43:47.133651Z  INFO security_core: database pool ready
+2026-05-13T01:43:47.134211Z  INFO security_core::service::token: PASETO keys loaded
+2026-05-13T01:43:47.134456Z  INFO security_core::security::revocation_store: revocation store loaded count=0 path=./security/revoked_tokens.enc
+2026-05-13T01:43:47.134486Z  INFO security_core::service::secrets: tenant secrets key loaded
+2026-05-13T01:43:47.134498Z  INFO security_core: gRPC server ready addr=0.0.0.0:50051
+2026-05-13T01:43:47.134504Z  WARN security_core: running in insecure dev mode — no mTLS
+2026-05-13T01:43:47.134510Z  INFO security_core::infrastructure::grpc::server: gRPC server listening on 0.0.0.0:50051 (insecure)

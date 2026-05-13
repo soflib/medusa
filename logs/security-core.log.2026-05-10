@@ -1,0 +1,191 @@
+2026-05-10T13:50:07.236269Z  INFO security_core: security-core starting version="0.1.0" log_dir=logs
+2026-05-10T13:50:09.317753Z  WARN sqlx::pool::acquire: acquired connection, but time to acquire exceeded slow threshold aquired_after_secs=2.0803636 slow_acquire_threshold_secs=2.0
+2026-05-10T13:50:09.317799Z  INFO security_core: database pool ready
+2026-05-10T13:50:09.318399Z  INFO security_core::service::token: PASETO keys loaded
+2026-05-10T13:50:09.318671Z  INFO security_core::security::revocation_store: revocation store loaded count=0 path=./security/revoked_tokens.enc
+2026-05-10T13:50:09.318697Z  INFO security_core::service::secrets: tenant secrets key loaded
+2026-05-10T13:50:09.318707Z  INFO security_core: gRPC server ready addr=0.0.0.0:50051
+2026-05-10T13:50:09.318713Z  WARN security_core: running in insecure dev mode — no mTLS
+2026-05-10T13:50:09.318720Z  INFO security_core::infrastructure::grpc::server: gRPC server listening on 0.0.0.0:50051 (insecure)
+2026-05-10T13:52:44.204698Z  WARN sqlx::pool::acquire: acquired connection, but time to acquire exceeded slow threshold aquired_after_secs=2.0827485 slow_acquire_threshold_secs=2.0
+2026-05-10T13:52:44.224849Z  INFO security_core::service::auth: login successful user_id=e8c00e1f-bdf0-483f-8c3c-0ecbb0428a31 email=string1
+2026-05-10T13:52:56.334239Z  WARN security_core::service::auth: login failed: wrong password user_id=e8c00e1f-bdf0-483f-8c3c-0ecbb0428a31 attempts=1
+2026-05-10T13:53:09.795020Z  INFO security_core::service::auth: login successful user_id=e8c00e1f-bdf0-483f-8c3c-0ecbb0428a31 email=string1
+2026-05-10T16:28:47.602254Z  INFO security_core: security-core starting version="0.1.0" log_dir=logs
+2026-05-10T16:28:49.680402Z  WARN sqlx::pool::acquire: acquired connection, but time to acquire exceeded slow threshold aquired_after_secs=2.0770805 slow_acquire_threshold_secs=2.0
+2026-05-10T16:28:49.680460Z  INFO security_core: database pool ready
+2026-05-10T16:28:49.681108Z  INFO security_core::service::token: PASETO keys loaded
+2026-05-10T16:28:49.681500Z  INFO security_core::security::revocation_store: revocation store loaded count=0 path=./security/revoked_tokens.enc
+2026-05-10T16:28:49.681540Z  INFO security_core::service::secrets: tenant secrets key loaded
+2026-05-10T16:31:25.358897Z  INFO security_core: security-core starting version="0.1.0" log_dir=logs
+2026-05-10T16:31:27.480599Z  WARN sqlx::pool::acquire: acquired connection, but time to acquire exceeded slow threshold aquired_after_secs=2.1204732 slow_acquire_threshold_secs=2.0
+2026-05-10T16:31:27.480706Z  INFO security_core: database pool ready
+2026-05-10T16:31:27.481649Z  INFO security_core::service::token: PASETO keys loaded
+2026-05-10T16:31:27.482322Z  INFO security_core::security::revocation_store: revocation store loaded count=0 path=./security/revoked_tokens.enc
+2026-05-10T16:31:27.482396Z  INFO security_core::service::secrets: tenant secrets key loaded
+2026-05-10T16:35:00.649102Z  INFO security_core: security-core starting version="0.1.0" log_dir=logs
+2026-05-10T16:35:02.734793Z  WARN sqlx::pool::acquire: acquired connection, but time to acquire exceeded slow threshold aquired_after_secs=2.0842744 slow_acquire_threshold_secs=2.0
+2026-05-10T16:35:02.734860Z  INFO security_core: database pool ready
+2026-05-10T16:35:02.735576Z  INFO security_core::service::token: PASETO keys loaded
+2026-05-10T16:35:02.736107Z  INFO security_core::security::revocation_store: revocation store loaded count=0 path=./security/revoked_tokens.enc
+2026-05-10T16:35:02.736154Z  INFO security_core::service::secrets: tenant secrets key loaded
+2026-05-10T16:35:02.736175Z  INFO security_core: gRPC server ready addr=0.0.0.0:50051
+2026-05-10T16:35:02.736191Z  WARN security_core: running in insecure dev mode — no mTLS
+2026-05-10T16:35:02.736208Z  INFO security_core::infrastructure::grpc::server: gRPC server listening on 0.0.0.0:50051 (insecure)
+2026-05-10T16:35:46.558946Z  WARN security_core::infrastructure::grpc::handler: create private database failed tenant_id=57d0aeb2-ea51-43f2-8978-9b3fcb2e7956 error=error with configuration: relative URL without a base
+2026-05-10T16:37:52.068753Z  WARN security_core::infrastructure::grpc::handler: auto-create tenant failed on register error=Conflict: error returned from database: duplicate key value violates unique constraint "tenants_name_key"
+2026-05-10T16:39:31.875783Z  INFO sqlx_core::pool::inner: ping on idle connection returned error error=error communicating with database: An established connection was aborted by the software in your host machine. (os error 10053)
+2026-05-10T16:39:33.962739Z  WARN sqlx::pool::acquire: acquired connection, but time to acquire exceeded slow threshold aquired_after_secs=2.0870778 slow_acquire_threshold_secs=2.0
+2026-05-10T16:39:33.982285Z  WARN security_core::infrastructure::grpc::handler: create private database failed tenant_id=f19f3554-44b2-48a6-87a9-27e152ea7ec4 error=error with configuration: relative URL without a base
+2026-05-10T16:40:44.194249Z  WARN security_core::infrastructure::grpc::handler: auto-create tenant failed on register error=Conflict: error returned from database: duplicate key value violates unique constraint "tenants_name_key"
+2026-05-10T16:41:19.359199Z  WARN sqlx::pool::acquire: acquired connection, but time to acquire exceeded slow threshold aquired_after_secs=2.0733732 slow_acquire_threshold_secs=2.0
+2026-05-10T16:41:19.517102Z  INFO security_core::service::secrets: secret created tenant_id=75fabd9a-eed2-4690-8948-56bda1fe4b1b
+2026-05-10T16:41:19.521008Z  INFO security_core::service::secrets: secret created tenant_id=75fabd9a-eed2-4690-8948-56bda1fe4b1b
+2026-05-10T16:41:19.521039Z  INFO security_core::infrastructure::grpc::handler: shared-db tenant schema provisioned tenant_id=75fabd9a-eed2-4690-8948-56bda1fe4b1b schema=t_75fabd9aeed24690894856bda1fe4b1b
+2026-05-10T16:41:19.878303Z  INFO security_core::infrastructure::grpc::handler: user registered user_id=dfb3f81e-2d50-47e7-a5a5-f0c40a6eb2e7
+2026-05-10T16:41:34.600229Z  INFO security_core::service::auth: login successful user_id=dfb3f81e-2d50-47e7-a5a5-f0c40a6eb2e7 email=string1
+2026-05-10T16:43:31.292138Z  INFO security_core::service::auth: login successful user_id=dfb3f81e-2d50-47e7-a5a5-f0c40a6eb2e7 email=string1
+2026-05-10T16:49:47.036204Z  INFO security_core: security-core starting version="0.1.0" log_dir=logs
+2026-05-10T16:49:49.147582Z  WARN sqlx::pool::acquire: acquired connection, but time to acquire exceeded slow threshold aquired_after_secs=2.1101471 slow_acquire_threshold_secs=2.0
+2026-05-10T16:49:49.147644Z  INFO security_core: database pool ready
+2026-05-10T16:49:49.148357Z  INFO security_core::service::token: PASETO keys loaded
+2026-05-10T16:49:49.148756Z  INFO security_core::security::revocation_store: revocation store loaded count=0 path=./security/revoked_tokens.enc
+2026-05-10T16:49:49.148806Z  INFO security_core::service::secrets: tenant secrets key loaded
+2026-05-10T16:49:49.148842Z  INFO security_core: gRPC server ready addr=0.0.0.0:50051
+2026-05-10T16:49:49.148857Z  WARN security_core: running in insecure dev mode — no mTLS
+2026-05-10T16:49:49.148872Z  INFO security_core::infrastructure::grpc::server: gRPC server listening on 0.0.0.0:50051 (insecure)
+2026-05-10T16:50:18.078774Z  INFO security_core::infrastructure::grpc::handler: get_all_users completed total=1
+2026-05-10T17:48:19.977420Z  WARN sqlx::pool::acquire: acquired connection, but time to acquire exceeded slow threshold aquired_after_secs=2.0797923 slow_acquire_threshold_secs=2.0
+2026-05-10T17:48:19.986941Z  INFO security_core::infrastructure::grpc::handler: get_all_users completed total=1
+2026-05-10T17:51:45.709120Z  WARN sqlx::pool::acquire: acquired connection, but time to acquire exceeded slow threshold aquired_after_secs=2.0729356 slow_acquire_threshold_secs=2.0
+2026-05-10T17:51:45.727641Z  INFO security_core::service::auth: login successful user_id=dfb3f81e-2d50-47e7-a5a5-f0c40a6eb2e7 email=string1
+2026-05-10T18:25:28.149971Z  WARN sqlx::pool::acquire: acquired connection, but time to acquire exceeded slow threshold aquired_after_secs=2.0661644 slow_acquire_threshold_secs=2.0
+2026-05-10T18:25:30.231280Z  WARN sqlx::pool::acquire: acquired connection, but time to acquire exceeded slow threshold aquired_after_secs=2.073269 slow_acquire_threshold_secs=2.0
+2026-05-10T18:25:30.364340Z  INFO security_core::service::secrets: secret created tenant_id=1d375ed3-3d36-4e48-8eba-d47fa85e6a35
+2026-05-10T18:25:30.367494Z  INFO security_core::service::secrets: secret created tenant_id=1d375ed3-3d36-4e48-8eba-d47fa85e6a35
+2026-05-10T18:25:30.367532Z  INFO security_core::infrastructure::grpc::handler: shared-db tenant schema provisioned tenant_id=1d375ed3-3d36-4e48-8eba-d47fa85e6a35 schema=t_1d375ed33d364e488ebad47fa85e6a35
+2026-05-10T18:25:30.724672Z  INFO security_core::infrastructure::grpc::handler: user registered user_id=e5444666-d47d-42a2-9524-4959821976eb
+2026-05-10T18:25:58.890850Z  WARN security_core::service::auth: login failed: wrong password user_id=e5444666-d47d-42a2-9524-4959821976eb attempts=1
+2026-05-10T18:26:49.994685Z  WARN security_core::service::auth: login failed: wrong password user_id=e5444666-d47d-42a2-9524-4959821976eb attempts=2
+2026-05-10T18:27:34.652781Z  WARN security_core::service::auth: login failed: wrong password user_id=e5444666-d47d-42a2-9524-4959821976eb attempts=3
+2026-05-10T18:28:26.004519Z  WARN security_core::service::auth: login failed: wrong password user_id=e5444666-d47d-42a2-9524-4959821976eb attempts=4
+2026-05-10T18:41:13.698795Z  WARN sqlx::pool::acquire: acquired connection, but time to acquire exceeded slow threshold aquired_after_secs=2.1011384 slow_acquire_threshold_secs=2.0
+2026-05-10T18:41:14.062765Z  WARN security_core::service::auth: login failed: wrong password user_id=e5444666-d47d-42a2-9524-4959821976eb attempts=5
+2026-05-10T18:41:14.062837Z  WARN security_core::service::auth: account locked after repeated failures user_id=e5444666-d47d-42a2-9524-4959821976eb lock_until=2026-05-10 18:56:14.062807800 UTC
+2026-05-10T18:41:16.133363Z  WARN sqlx::pool::acquire: acquired connection, but time to acquire exceeded slow threshold aquired_after_secs=2.0704883 slow_acquire_threshold_secs=2.0
+2026-05-10T18:42:19.565570Z  WARN security_core::service::auth: login rejected: account locked user_id=e5444666-d47d-42a2-9524-4959821976eb locked_until=2026-05-10 18:56:14.062807 UTC
+2026-05-10T18:42:57.169091Z  INFO security_core::service::secrets: secret created tenant_id=131d9013-ad0c-455b-a276-9fd96962d688
+2026-05-10T18:42:57.172536Z  INFO security_core::service::secrets: secret created tenant_id=131d9013-ad0c-455b-a276-9fd96962d688
+2026-05-10T18:42:57.172573Z  INFO security_core::infrastructure::grpc::handler: shared-db tenant schema provisioned tenant_id=131d9013-ad0c-455b-a276-9fd96962d688 schema=t_131d9013ad0c455ba2769fd96962d688
+2026-05-10T18:42:57.539676Z  INFO security_core::infrastructure::grpc::handler: user registered user_id=175df178-fd71-417b-a685-6bca8d070b96
+2026-05-10T18:43:24.385543Z  INFO security_core::service::auth: login successful user_id=175df178-fd71-417b-a685-6bca8d070b96 email=string@string.com
+2026-05-10T18:44:50.880173Z  INFO security_core::service::auth: login successful user_id=175df178-fd71-417b-a685-6bca8d070b96 email=string@string.com
+2026-05-10T19:08:06.739720Z  WARN security_core::service::token: access token rejected: invalid signature or expired
+2026-05-10T19:08:06.739779Z  WARN security_core::infrastructure::grpc::handler: validate_token rejected error=token error: token is invalid or expired
+2026-05-10T19:08:25.804470Z  WARN sqlx::pool::acquire: acquired connection, but time to acquire exceeded slow threshold aquired_after_secs=2.0940914 slow_acquire_threshold_secs=2.0
+2026-05-10T19:08:28.287197Z  WARN sqlx::pool::acquire: acquired connection, but time to acquire exceeded slow threshold aquired_after_secs=2.0946792 slow_acquire_threshold_secs=2.0
+2026-05-10T19:08:28.306791Z  INFO security_core::service::auth: login successful user_id=175df178-fd71-417b-a685-6bca8d070b96 email=string@string.com
+2026-05-10T19:15:10.158819Z  WARN sqlx::pool::acquire: acquired connection, but time to acquire exceeded slow threshold aquired_after_secs=2.0795116 slow_acquire_threshold_secs=2.0
+2026-05-10T19:15:10.169870Z  INFO security_core::infrastructure::grpc::handler: get_all_users completed total=3
+2026-05-10T19:15:10.176126Z  INFO security_core::infrastructure::grpc::handler: get_all_users completed total=3
+2026-05-10T19:18:02.546387Z  INFO security_core::infrastructure::grpc::handler: get_all_users completed total=3
+2026-05-10T19:18:02.552043Z  INFO security_core::infrastructure::grpc::handler: get_all_users completed total=3
+2026-05-10T19:18:36.370145Z  WARN sqlx::pool::acquire: acquired connection, but time to acquire exceeded slow threshold aquired_after_secs=2.0749337 slow_acquire_threshold_secs=2.0
+2026-05-10T19:18:36.503711Z  INFO security_core::service::secrets: secret created tenant_id=d98c6b70-80c9-42bb-9181-0331d3d13fa1
+2026-05-10T19:18:36.507262Z  INFO security_core::service::secrets: secret created tenant_id=d98c6b70-80c9-42bb-9181-0331d3d13fa1
+2026-05-10T19:18:36.507299Z  INFO security_core::infrastructure::grpc::handler: shared-db tenant schema provisioned tenant_id=d98c6b70-80c9-42bb-9181-0331d3d13fa1 schema=t_d98c6b7080c942bb91810331d3d13fa1
+2026-05-10T19:18:36.891659Z  INFO security_core::infrastructure::grpc::handler: user registered user_id=9a845950-073e-427c-83c1-1ff7093cc1d7
+2026-05-10T19:18:36.900187Z  INFO security_core::infrastructure::grpc::handler: get_all_users completed total=4
+2026-05-10T19:18:41.831218Z  INFO security_core::infrastructure::grpc::handler: get_all_users completed total=4
+2026-05-10T19:18:41.836806Z  INFO security_core::infrastructure::grpc::handler: get_all_users completed total=4
+2026-05-10T19:18:48.186564Z  INFO security_core::infrastructure::grpc::handler: get_all_users completed total=4
+2026-05-10T19:18:48.192200Z  INFO security_core::infrastructure::grpc::handler: get_all_users completed total=4
+2026-05-10T19:22:04.829440Z  INFO security_core::infrastructure::grpc::handler: get_all_users completed total=4
+2026-05-10T19:22:04.835005Z  INFO security_core::infrastructure::grpc::handler: get_all_users completed total=4
+2026-05-10T19:23:29.975472Z  INFO security_core: security-core starting version="0.1.0" log_dir=logs
+2026-05-10T19:23:32.073481Z  WARN sqlx::pool::acquire: acquired connection, but time to acquire exceeded slow threshold aquired_after_secs=2.0962458 slow_acquire_threshold_secs=2.0
+2026-05-10T19:23:32.073617Z  INFO security_core: database pool ready
+2026-05-10T19:23:32.074366Z  INFO security_core::service::token: PASETO keys loaded
+2026-05-10T19:23:32.074963Z  INFO security_core::security::revocation_store: revocation store loaded count=0 path=./security/revoked_tokens.enc
+2026-05-10T19:23:32.075021Z  INFO security_core::service::secrets: tenant secrets key loaded
+2026-05-10T19:23:32.075045Z  INFO security_core: gRPC server ready addr=0.0.0.0:50051
+2026-05-10T19:23:32.075053Z  WARN security_core: running in insecure dev mode — no mTLS
+2026-05-10T19:23:32.075107Z  INFO security_core::infrastructure::grpc::server: gRPC server listening on 0.0.0.0:50051 (insecure)
+2026-05-10T19:24:03.244604Z  WARN security_core::service::token: access token rejected: invalid signature or expired
+2026-05-10T19:24:03.244654Z  WARN security_core::infrastructure::grpc::handler: validate_token rejected error=token error: token is invalid or expired
+2026-05-10T19:24:03.247525Z  WARN security_core::service::token: access token rejected: invalid signature or expired
+2026-05-10T19:24:03.247562Z  WARN security_core::infrastructure::grpc::handler: validate_token rejected error=token error: token is invalid or expired
+2026-05-10T19:24:20.858397Z  WARN sqlx::pool::acquire: acquired connection, but time to acquire exceeded slow threshold aquired_after_secs=2.0817052 slow_acquire_threshold_secs=2.0
+2026-05-10T19:24:20.878048Z  INFO security_core::service::auth: login successful user_id=175df178-fd71-417b-a685-6bca8d070b96 email=string@string.com
+2026-05-10T19:24:27.922983Z  INFO security_core::infrastructure::grpc::handler: get_all_users completed total=2
+2026-05-10T19:24:27.930867Z  INFO security_core::infrastructure::grpc::handler: get_all_users completed total=2
+2026-05-10T19:29:33.944964Z  INFO security_core: security-core starting version="0.1.0" log_dir=logs
+2026-05-10T19:29:36.025955Z  WARN sqlx::pool::acquire: acquired connection, but time to acquire exceeded slow threshold aquired_after_secs=2.0794335 slow_acquire_threshold_secs=2.0
+2026-05-10T19:29:36.026035Z  INFO security_core: database pool ready
+2026-05-10T19:29:36.026761Z  INFO security_core::service::token: PASETO keys loaded
+2026-05-10T19:29:36.027222Z  INFO security_core::security::revocation_store: revocation store loaded count=0 path=./security/revoked_tokens.enc
+2026-05-10T19:29:36.027264Z  INFO security_core::service::secrets: tenant secrets key loaded
+2026-05-10T19:29:36.027288Z  INFO security_core: gRPC server ready addr=0.0.0.0:50051
+2026-05-10T19:29:36.027301Z  WARN security_core: running in insecure dev mode — no mTLS
+2026-05-10T19:29:36.027320Z  INFO security_core::infrastructure::grpc::server: gRPC server listening on 0.0.0.0:50051 (insecure)
+2026-05-10T19:30:11.809920Z  INFO security_core::infrastructure::grpc::handler: get_all_users completed total=2
+2026-05-10T19:30:11.815867Z  INFO security_core::infrastructure::grpc::handler: get_all_users completed total=2
+2026-05-10T19:30:29.118482Z  WARN sqlx::pool::acquire: acquired connection, but time to acquire exceeded slow threshold aquired_after_secs=2.0621007 slow_acquire_threshold_secs=2.0
+2026-05-10T19:30:29.138865Z  INFO security_core::service::auth: login successful user_id=175df178-fd71-417b-a685-6bca8d070b96 email=string@string.com
+2026-05-10T19:30:35.645690Z  INFO security_core::infrastructure::grpc::handler: get_all_users completed total=2
+2026-05-10T19:30:35.652332Z  INFO security_core::infrastructure::grpc::handler: get_all_users completed total=2
+2026-05-10T19:31:12.554914Z  INFO security_core::infrastructure::grpc::handler: get_all_users completed total=2
+2026-05-10T19:31:12.560871Z  INFO security_core::infrastructure::grpc::handler: get_all_users completed total=2
+2026-05-10T19:31:25.630604Z  WARN security_core::infrastructure::grpc::handler: register sub-user failed error=Database error: error returned from database: invalid input value for enum user_role: "arquitecto"
+2026-05-10T19:31:33.700148Z  WARN security_core::infrastructure::grpc::handler: register sub-user failed error=Database error: error returned from database: invalid input value for enum user_role: "finanzas"
+2026-05-10T19:31:37.323508Z  WARN security_core::infrastructure::grpc::handler: register sub-user failed error=Database error: error returned from database: invalid input value for enum user_role: "reportes"
+2026-05-10T19:33:37.528285Z  INFO sqlx_core::pool::inner: ping on idle connection returned error error=error communicating with database: An established connection was aborted by the software in your host machine. (os error 10053)
+2026-05-10T19:33:39.643528Z  WARN sqlx::pool::acquire: acquired connection, but time to acquire exceeded slow threshold aquired_after_secs=2.1153532 slow_acquire_threshold_secs=2.0
+2026-05-10T19:33:39.666895Z  INFO sqlx_core::pool::inner: ping on idle connection returned error error=error communicating with database: An established connection was aborted by the software in your host machine. (os error 10053)
+2026-05-10T19:33:41.759612Z  WARN sqlx::pool::acquire: acquired connection, but time to acquire exceeded slow threshold aquired_after_secs=2.0927865 slow_acquire_threshold_secs=2.0
+2026-05-10T19:33:41.929893Z  INFO security_core::service::secrets: secret created tenant_id=b351b8e6-5294-4280-ad9d-95b3c00c57c7
+2026-05-10T19:33:41.933697Z  INFO security_core::service::secrets: secret created tenant_id=b351b8e6-5294-4280-ad9d-95b3c00c57c7
+2026-05-10T19:33:41.933734Z  INFO security_core::infrastructure::grpc::handler: shared-db tenant schema provisioned tenant_id=b351b8e6-5294-4280-ad9d-95b3c00c57c7 schema=t_b351b8e652944280ad9d95b3c00c57c7
+2026-05-10T19:33:42.310975Z  INFO security_core::infrastructure::grpc::handler: user registered user_id=6fa5416c-2f8f-4984-b894-4fdf337d577a
+2026-05-10T19:34:00.475025Z  INFO security_core::service::auth: login successful user_id=6fa5416c-2f8f-4984-b894-4fdf337d577a email=string@string.com
+2026-05-10T19:34:06.574077Z  INFO security_core::infrastructure::grpc::handler: get_all_users completed total=1
+2026-05-10T19:34:06.582153Z  INFO security_core::infrastructure::grpc::handler: get_all_users completed total=1
+2026-05-10T19:38:30.015294Z  INFO security_core::infrastructure::grpc::handler: get_all_users completed total=1
+2026-05-10T19:38:30.020808Z  INFO security_core::infrastructure::grpc::handler: get_all_users completed total=1
+2026-05-10T19:38:42.894173Z  INFO security_core::infrastructure::grpc::handler: sub-user registered user_id=439c52da-9679-45e7-b75e-bd7ea109889f tenant_id=b351b8e6-5294-4280-ad9d-95b3c00c57c7
+2026-05-10T19:38:42.903595Z  INFO security_core::infrastructure::grpc::handler: get_all_users completed total=2
+2026-05-10T19:39:18.181753Z  INFO security_core::infrastructure::grpc::handler: get_all_users completed total=2
+2026-05-10T19:39:18.187892Z  INFO security_core::infrastructure::grpc::handler: get_all_users completed total=2
+2026-05-10T19:39:21.900510Z  INFO security_core::infrastructure::grpc::handler: get_all_users completed total=2
+2026-05-10T19:39:21.906063Z  INFO security_core::infrastructure::grpc::handler: get_all_users completed total=2
+2026-05-10T19:39:34.703624Z  INFO security_core::infrastructure::grpc::handler: sub-user registered user_id=aeb0d8e7-7e49-44ce-a131-2bae4b5767f3 tenant_id=b351b8e6-5294-4280-ad9d-95b3c00c57c7
+2026-05-10T19:39:34.711727Z  INFO security_core::infrastructure::grpc::handler: get_all_users completed total=3
+2026-05-10T19:40:04.902020Z  INFO security_core::service::auth: login successful user_id=439c52da-9679-45e7-b75e-bd7ea109889f email=solbustani@gmail.com
+2026-05-10T19:40:12.868919Z  INFO security_core::infrastructure::grpc::handler: get_all_users completed total=3
+2026-05-10T19:40:12.874613Z  INFO security_core::infrastructure::grpc::handler: get_all_users completed total=3
+2026-05-10T19:40:22.455776Z  INFO security_core::infrastructure::grpc::handler: get_all_users completed total=3
+2026-05-10T19:40:22.461581Z  INFO security_core::infrastructure::grpc::handler: get_all_users completed total=3
+2026-05-10T19:41:57.772993Z  INFO security_core::infrastructure::grpc::handler: get_all_users completed total=3
+2026-05-10T19:41:57.779077Z  INFO security_core::infrastructure::grpc::handler: get_all_users completed total=3
+2026-05-10T19:42:14.575401Z  INFO security_core::service::auth: password changed user_id=439c52da-9679-45e7-b75e-bd7ea109889f sessions_revoked=0
+2026-05-10T19:42:24.408000Z  INFO security_core::service::auth: login successful user_id=439c52da-9679-45e7-b75e-bd7ea109889f email=solbustani@gmail.com
+2026-05-10T19:42:33.993881Z  INFO security_core::infrastructure::grpc::handler: get_all_users completed total=3
+2026-05-10T19:42:34.001387Z  INFO security_core::infrastructure::grpc::handler: get_all_users completed total=3
+2026-05-10T19:42:36.535222Z  INFO security_core::infrastructure::grpc::handler: get_all_users completed total=3
+2026-05-10T19:42:36.540812Z  INFO security_core::infrastructure::grpc::handler: get_all_users completed total=3
+2026-05-10T20:53:12.017450Z  WARN security_core::service::token: access token rejected: invalid signature or expired
+2026-05-10T20:53:12.017510Z  WARN security_core::infrastructure::grpc::handler: validate_token rejected error=token error: token is invalid or expired
+2026-05-10T20:53:12.019628Z  WARN security_core::service::token: access token rejected: invalid signature or expired
+2026-05-10T20:53:12.019660Z  WARN security_core::infrastructure::grpc::handler: validate_token rejected error=token error: token is invalid or expired
+2026-05-10T20:53:27.866379Z  WARN sqlx::pool::acquire: acquired connection, but time to acquire exceeded slow threshold aquired_after_secs=2.0537962 slow_acquire_threshold_secs=2.0
+2026-05-10T20:53:30.315531Z  WARN sqlx::pool::acquire: acquired connection, but time to acquire exceeded slow threshold aquired_after_secs=2.0760841 slow_acquire_threshold_secs=2.0
+2026-05-10T20:53:30.334109Z  INFO security_core::service::auth: login successful user_id=439c52da-9679-45e7-b75e-bd7ea109889f email=solbustani@gmail.com
+2026-05-10T20:53:35.275102Z  INFO security_core::infrastructure::grpc::handler: get_all_users completed total=3
+2026-05-10T20:53:35.281879Z  INFO security_core::infrastructure::grpc::handler: get_all_users completed total=3
+2026-05-10T21:15:41.401859Z  WARN sqlx::pool::acquire: acquired connection, but time to acquire exceeded slow threshold aquired_after_secs=2.0825196 slow_acquire_threshold_secs=2.0
+2026-05-10T21:15:43.850403Z  WARN sqlx::pool::acquire: acquired connection, but time to acquire exceeded slow threshold aquired_after_secs=2.0669453 slow_acquire_threshold_secs=2.0
+2026-05-10T21:15:43.868637Z  INFO security_core::service::auth: login successful user_id=6fa5416c-2f8f-4984-b894-4fdf337d577a email=string@string.com
+2026-05-10T21:20:27.282532Z  INFO security_core::service::auth: login successful user_id=439c52da-9679-45e7-b75e-bd7ea109889f email=solbustani@gmail.com
+2026-05-10T21:20:43.642760Z  WARN security_core::service::auth: login failed: wrong password user_id=6fa5416c-2f8f-4984-b894-4fdf337d577a attempts=1
+2026-05-10T21:20:59.057581Z  INFO security_core::service::auth: login successful user_id=6fa5416c-2f8f-4984-b894-4fdf337d577a email=string@string.com
+2026-05-10T21:21:24.551225Z  INFO security_core::service::auth: login successful user_id=439c52da-9679-45e7-b75e-bd7ea109889f email=solbustani@gmail.com

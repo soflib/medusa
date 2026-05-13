@@ -1,0 +1,67 @@
+2026-05-11T14:41:23.822854Z  INFO security_core: security-core starting version="0.1.0" log_dir=logs
+2026-05-11T14:41:25.917776Z  WARN sqlx::pool::acquire: acquired connection, but time to acquire exceeded slow threshold aquired_after_secs=2.0935788 slow_acquire_threshold_secs=2.0
+2026-05-11T14:41:25.917827Z  INFO security_core: database pool ready
+2026-05-11T14:41:25.918388Z  INFO security_core::service::token: PASETO keys loaded
+2026-05-11T14:41:25.918613Z  INFO security_core::security::revocation_store: revocation store loaded count=0 path=./security/revoked_tokens.enc
+2026-05-11T14:41:25.918646Z  INFO security_core::service::secrets: tenant secrets key loaded
+2026-05-11T14:41:25.918659Z  INFO security_core: gRPC server ready addr=0.0.0.0:50051
+2026-05-11T14:41:25.918666Z  WARN security_core: running in insecure dev mode — no mTLS
+2026-05-11T14:41:25.918672Z  INFO security_core::infrastructure::grpc::server: gRPC server listening on 0.0.0.0:50051 (insecure)
+2026-05-11T14:50:25.461693Z  WARN security_core::service::token: access token rejected: invalid signature or expired
+2026-05-11T14:50:25.461683Z  WARN security_core::service::token: access token rejected: invalid signature or expired
+2026-05-11T14:50:25.461725Z  WARN security_core::service::token: access token rejected: invalid signature or expired
+2026-05-11T14:50:25.461780Z  WARN security_core::infrastructure::grpc::handler: validate_token rejected error=token error: token is invalid or expired
+2026-05-11T14:50:25.461771Z  WARN security_core::infrastructure::grpc::handler: validate_token rejected error=token error: token is invalid or expired
+2026-05-11T14:50:25.461773Z  WARN security_core::infrastructure::grpc::handler: validate_token rejected error=token error: token is invalid or expired
+2026-05-11T14:50:25.463135Z  WARN security_core::service::token: access token rejected: invalid signature or expired
+2026-05-11T14:50:25.463187Z  WARN security_core::infrastructure::grpc::handler: validate_token rejected error=token error: token is invalid or expired
+2026-05-11T14:50:25.463858Z  WARN security_core::service::token: access token rejected: invalid signature or expired
+2026-05-11T14:50:25.463890Z  WARN security_core::infrastructure::grpc::handler: validate_token rejected error=token error: token is invalid or expired
+2026-05-11T14:50:25.463986Z  WARN security_core::service::token: access token rejected: invalid signature or expired
+2026-05-11T14:50:25.464018Z  WARN security_core::infrastructure::grpc::handler: validate_token rejected error=token error: token is invalid or expired
+2026-05-11T14:50:25.466970Z  WARN security_core::service::token: access token rejected: invalid signature or expired
+2026-05-11T14:50:25.467023Z  WARN security_core::infrastructure::grpc::handler: validate_token rejected error=token error: token is invalid or expired
+2026-05-11T14:50:25.467189Z  WARN security_core::service::token: access token rejected: invalid signature or expired
+2026-05-11T14:50:25.467211Z  WARN security_core::infrastructure::grpc::handler: validate_token rejected error=token error: token is invalid or expired
+2026-05-11T14:50:25.467637Z  WARN security_core::service::token: access token rejected: invalid signature or expired
+2026-05-11T14:50:25.467658Z  WARN security_core::infrastructure::grpc::handler: validate_token rejected error=token error: token is invalid or expired
+2026-05-11T14:50:25.467674Z  WARN security_core::service::token: access token rejected: invalid signature or expired
+2026-05-11T14:50:25.467691Z  WARN security_core::infrastructure::grpc::handler: validate_token rejected error=token error: token is invalid or expired
+2026-05-11T14:50:25.467733Z  WARN security_core::service::token: access token rejected: invalid signature or expired
+2026-05-11T14:50:25.467750Z  WARN security_core::infrastructure::grpc::handler: validate_token rejected error=token error: token is invalid or expired
+2026-05-11T14:50:25.468015Z  WARN security_core::service::token: access token rejected: invalid signature or expired
+2026-05-11T14:50:25.468058Z  WARN security_core::infrastructure::grpc::handler: validate_token rejected error=token error: token is invalid or expired
+2026-05-11T14:50:25.471070Z  WARN security_core::service::token: access token rejected: invalid signature or expired
+2026-05-11T14:50:25.471108Z  WARN security_core::infrastructure::grpc::handler: validate_token rejected error=token error: token is invalid or expired
+2026-05-11T14:50:25.471154Z  WARN security_core::service::token: access token rejected: invalid signature or expired
+2026-05-11T14:50:25.471178Z  WARN security_core::infrastructure::grpc::handler: validate_token rejected error=token error: token is invalid or expired
+2026-05-11T14:50:25.471240Z  WARN security_core::service::token: access token rejected: invalid signature or expired
+2026-05-11T14:50:25.471268Z  WARN security_core::infrastructure::grpc::handler: validate_token rejected error=token error: token is invalid or expired
+2026-05-11T14:50:25.471285Z  WARN security_core::service::token: access token rejected: invalid signature or expired
+2026-05-11T14:50:25.471297Z  WARN security_core::infrastructure::grpc::handler: validate_token rejected error=token error: token is invalid or expired
+2026-05-11T14:50:39.922827Z  WARN sqlx::pool::acquire: acquired connection, but time to acquire exceeded slow threshold aquired_after_secs=2.0820288 slow_acquire_threshold_secs=2.0
+2026-05-11T14:50:39.944150Z  INFO security_core::service::auth: login successful user_id=439c52da-9679-45e7-b75e-bd7ea109889f email=solbustani@gmail.com
+2026-05-11T15:09:32.934529Z  WARN security_core::service::token: access token rejected: invalid signature or expired
+2026-05-11T15:09:32.934586Z  WARN security_core::infrastructure::grpc::handler: validate_token rejected error=token error: token is invalid or expired
+2026-05-11T15:09:32.936621Z  WARN security_core::service::token: access token rejected: invalid signature or expired
+2026-05-11T15:09:32.936652Z  WARN security_core::infrastructure::grpc::handler: validate_token rejected error=token error: token is invalid or expired
+2026-05-11T15:09:43.429889Z  WARN sqlx::pool::acquire: acquired connection, but time to acquire exceeded slow threshold aquired_after_secs=2.0804112 slow_acquire_threshold_secs=2.0
+2026-05-11T15:09:45.912177Z  WARN sqlx::pool::acquire: acquired connection, but time to acquire exceeded slow threshold aquired_after_secs=2.098481 slow_acquire_threshold_secs=2.0
+2026-05-11T15:09:45.930619Z  INFO security_core::service::auth: login successful user_id=439c52da-9679-45e7-b75e-bd7ea109889f email=solbustani@gmail.com
+2026-05-11T15:11:06.423655Z  INFO security_core::service::auth: login successful user_id=6fa5416c-2f8f-4984-b894-4fdf337d577a email=string@string.com
+2026-05-11T15:11:10.439638Z  INFO security_core::infrastructure::grpc::handler: get_all_users completed total=3
+2026-05-11T15:11:10.446533Z  INFO security_core::infrastructure::grpc::handler: get_all_users completed total=3
+2026-05-11T15:11:15.080552Z  INFO security_core::infrastructure::grpc::handler: get_all_users completed total=3
+2026-05-11T15:11:15.086789Z  INFO security_core::infrastructure::grpc::handler: get_all_users completed total=3
+2026-05-11T15:11:41.176245Z  INFO security_core::infrastructure::grpc::handler: get_all_users completed total=3
+2026-05-11T15:11:41.182546Z  INFO security_core::infrastructure::grpc::handler: get_all_users completed total=3
+2026-05-11T15:11:52.859544Z  INFO security_core::service::auth: login successful user_id=439c52da-9679-45e7-b75e-bd7ea109889f email=solbustani@gmail.com
+2026-05-11T21:23:26.275788Z  INFO security_core: security-core starting version="0.1.0" log_dir=logs
+2026-05-11T21:23:28.366593Z  WARN sqlx::pool::acquire: acquired connection, but time to acquire exceeded slow threshold aquired_after_secs=2.0897071 slow_acquire_threshold_secs=2.0
+2026-05-11T21:23:28.366651Z  INFO security_core: database pool ready
+2026-05-11T21:23:28.367300Z  INFO security_core::service::token: PASETO keys loaded
+2026-05-11T21:23:28.367639Z  INFO security_core::security::revocation_store: revocation store loaded count=0 path=./security/revoked_tokens.enc
+2026-05-11T21:23:28.367676Z  INFO security_core::service::secrets: tenant secrets key loaded
+2026-05-11T21:23:28.367698Z  INFO security_core: gRPC server ready addr=0.0.0.0:50051
+2026-05-11T21:23:28.367705Z  WARN security_core: running in insecure dev mode — no mTLS
+2026-05-11T21:23:28.367718Z  INFO security_core::infrastructure::grpc::server: gRPC server listening on 0.0.0.0:50051 (insecure)

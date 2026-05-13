@@ -1,0 +1,109 @@
+2026-05-09T01:17:14.783270Z  INFO security_core: security-core starting version="0.1.0" log_dir=logs
+2026-05-09T01:17:16.866864Z  WARN sqlx::pool::acquire: acquired connection, but time to acquire exceeded slow threshold aquired_after_secs=2.0823784 slow_acquire_threshold_secs=2.0
+2026-05-09T01:17:16.866915Z  INFO security_core: database pool ready
+2026-05-09T01:19:17.188913Z  INFO security_core: security-core starting version="0.1.0" log_dir=logs
+2026-05-09T01:19:19.247100Z  WARN sqlx::pool::acquire: acquired connection, but time to acquire exceeded slow threshold aquired_after_secs=2.0567215 slow_acquire_threshold_secs=2.0
+2026-05-09T01:19:19.247171Z  INFO security_core: database pool ready
+2026-05-09T01:29:56.055450Z  INFO security_core: security-core starting version="0.1.0" log_dir=logs
+2026-05-09T01:29:58.145011Z  WARN sqlx::pool::acquire: acquired connection, but time to acquire exceeded slow threshold aquired_after_secs=2.0882434 slow_acquire_threshold_secs=2.0
+2026-05-09T01:29:58.145084Z  INFO security_core: database pool ready
+2026-05-09T01:29:58.145733Z  INFO security_core::service::token: PASETO keys loaded
+2026-05-09T01:29:58.146895Z  INFO security_core::security::revocation_store: revocation store loaded count=0 path=./security/revoked_tokens.enc
+2026-05-09T01:29:58.146936Z  INFO security_core::service::secrets: tenant secrets key loaded
+2026-05-09T01:29:58.146953Z  INFO security_core: gRPC server ready addr=0.0.0.0:50051
+2026-05-09T01:29:58.146960Z  WARN security_core: running in insecure dev mode — no mTLS
+2026-05-09T01:29:58.146971Z  INFO security_core::infrastructure::grpc::server: gRPC server listening on 0.0.0.0:50051 (insecure)
+2026-05-09T01:34:00.997703Z  WARN security_core::infrastructure::grpc::handler: register failed error=Database error: error returned from database: type "user_role" does not exist
+2026-05-09T01:34:29.876783Z  WARN security_core::infrastructure::grpc::handler: register failed error=Database error: error returned from database: type "user_role" does not exist
+2026-05-09T01:36:51.194781Z  INFO security_core: security-core starting version="0.1.0" log_dir=logs
+2026-05-09T01:36:53.273231Z  WARN sqlx::pool::acquire: acquired connection, but time to acquire exceeded slow threshold aquired_after_secs=2.0769133 slow_acquire_threshold_secs=2.0
+2026-05-09T01:36:53.273308Z  INFO security_core: database pool ready
+2026-05-09T01:36:53.274110Z  INFO security_core::service::token: PASETO keys loaded
+2026-05-09T01:36:53.274595Z  INFO security_core::security::revocation_store: revocation store loaded count=0 path=./security/revoked_tokens.enc
+2026-05-09T01:36:53.274644Z  INFO security_core::service::secrets: tenant secrets key loaded
+2026-05-09T01:36:53.274670Z  INFO security_core: gRPC server ready addr=0.0.0.0:50051
+2026-05-09T01:36:53.274702Z  WARN security_core: running in insecure dev mode — no mTLS
+2026-05-09T01:36:53.274722Z  INFO security_core::infrastructure::grpc::server: gRPC server listening on 0.0.0.0:50051 (insecure)
+2026-05-09T01:37:03.866118Z  INFO security_core::infrastructure::grpc::handler: user registered user_id=175fdce5-f23d-4175-81e5-48578f2f55f4
+2026-05-09T01:37:25.671953Z  INFO security_core::infrastructure::grpc::handler: get_all_users completed total=1
+2026-05-09T01:41:59.744290Z  INFO security_core: security-core starting version="0.1.0" log_dir=logs
+2026-05-09T01:42:01.825107Z  WARN sqlx::pool::acquire: acquired connection, but time to acquire exceeded slow threshold aquired_after_secs=2.0793615 slow_acquire_threshold_secs=2.0
+2026-05-09T01:42:01.825233Z  INFO security_core: database pool ready
+2026-05-09T01:42:01.825974Z  INFO security_core::service::token: PASETO keys loaded
+2026-05-09T01:42:01.826472Z  INFO security_core::security::revocation_store: revocation store loaded count=0 path=./security/revoked_tokens.enc
+2026-05-09T01:42:01.826522Z  INFO security_core::service::secrets: tenant secrets key loaded
+2026-05-09T01:42:01.826549Z  INFO security_core: gRPC server ready addr=0.0.0.0:50051
+2026-05-09T01:42:01.826562Z  WARN security_core: running in insecure dev mode — no mTLS
+2026-05-09T01:42:01.826576Z  INFO security_core::infrastructure::grpc::server: gRPC server listening on 0.0.0.0:50051 (insecure)
+2026-05-09T01:43:08.195360Z  INFO security_core::infrastructure::grpc::handler: user registered user_id=fc003765-4c62-4360-a95f-68aa0fe1bdae
+2026-05-09T01:43:21.973341Z  INFO security_core::infrastructure::grpc::handler: get_all_users completed total=1
+2026-05-09T01:43:24.645342Z  INFO security_core::infrastructure::grpc::handler: get_all_users completed total=1
+2026-05-09T01:44:30.446371Z  INFO security_core::infrastructure::grpc::handler: user registered user_id=fbca1dc6-d103-4f58-92b6-cc5388c2be8f
+2026-05-09T01:44:37.222690Z  INFO security_core::infrastructure::grpc::handler: get_all_users completed total=2
+2026-05-09T01:48:52.638061Z  INFO security_core: security-core starting version="0.1.0" log_dir=logs
+2026-05-09T01:48:54.719607Z  WARN sqlx::pool::acquire: acquired connection, but time to acquire exceeded slow threshold aquired_after_secs=2.0800466 slow_acquire_threshold_secs=2.0
+2026-05-09T01:48:54.719678Z  INFO security_core: database pool ready
+2026-05-09T01:48:54.720476Z  INFO security_core::service::token: PASETO keys loaded
+2026-05-09T01:48:54.720874Z  INFO security_core::security::revocation_store: revocation store loaded count=0 path=./security/revoked_tokens.enc
+2026-05-09T01:48:54.720921Z  INFO security_core::service::secrets: tenant secrets key loaded
+2026-05-09T01:48:54.720950Z  INFO security_core: gRPC server ready addr=0.0.0.0:50051
+2026-05-09T01:48:54.720965Z  WARN security_core: running in insecure dev mode — no mTLS
+2026-05-09T01:48:54.720979Z  INFO security_core::infrastructure::grpc::server: gRPC server listening on 0.0.0.0:50051 (insecure)
+2026-05-09T01:49:14.578005Z  INFO security_core::infrastructure::grpc::handler: tenant auto-created on register tenant_id=cc63add9-4f7f-4bee-843b-046de530c0cc name=string1
+2026-05-09T01:49:15.001737Z  INFO security_core::infrastructure::grpc::handler: user registered user_id=f76bc5ac-f30d-4f51-b6da-838ef785d60f
+2026-05-09T01:49:22.282615Z  INFO security_core::infrastructure::grpc::handler: get_all_users completed total=3
+2026-05-09T02:02:44.882004Z  INFO security_core: security-core starting version="0.1.0" log_dir=logs
+2026-05-09T02:02:46.990118Z  WARN sqlx::pool::acquire: acquired connection, but time to acquire exceeded slow threshold aquired_after_secs=2.1064406 slow_acquire_threshold_secs=2.0
+2026-05-09T02:02:46.990191Z  INFO security_core: database pool ready
+2026-05-09T02:02:46.990972Z  INFO security_core::service::token: PASETO keys loaded
+2026-05-09T02:02:46.991387Z  INFO security_core::security::revocation_store: revocation store loaded count=0 path=./security/revoked_tokens.enc
+2026-05-09T02:02:46.991434Z  INFO security_core::service::secrets: tenant secrets key loaded
+2026-05-09T02:02:46.991454Z  INFO security_core: gRPC server ready addr=0.0.0.0:50051
+2026-05-09T02:02:46.991466Z  WARN security_core: running in insecure dev mode — no mTLS
+2026-05-09T02:02:46.991483Z  INFO security_core::infrastructure::grpc::server: gRPC server listening on 0.0.0.0:50051 (insecure)
+2026-05-09T02:03:28.633896Z  INFO security_core::infrastructure::grpc::handler: get_all_users completed total=0
+2026-05-09T02:03:49.363828Z  INFO security_core::infrastructure::grpc::handler: tenant auto-created on register tenant_id=2c99d593-8fa0-485e-92ba-97ec1c73b2a1 name=string
+2026-05-09T02:03:49.730474Z  INFO security_core::infrastructure::grpc::handler: user registered user_id=83884d89-713f-431c-b0f6-f5e53165fd87
+2026-05-09T02:03:52.019020Z  WARN security_core::infrastructure::grpc::handler: auto-create tenant failed on register error=Conflict: error returned from database: duplicate key value violates unique constraint "tenants_name_key"
+2026-05-09T02:04:04.154047Z  INFO security_core::infrastructure::grpc::handler: get_all_users completed total=1
+2026-05-09T03:32:12.673514Z  INFO security_core: security-core starting version="0.1.0" log_dir=logs
+2026-05-09T03:32:14.763236Z  WARN sqlx::pool::acquire: acquired connection, but time to acquire exceeded slow threshold aquired_after_secs=2.088475 slow_acquire_threshold_secs=2.0
+2026-05-09T03:32:14.763314Z  INFO security_core: database pool ready
+2026-05-09T03:32:14.764049Z  INFO security_core::service::token: PASETO keys loaded
+2026-05-09T03:32:14.764438Z  INFO security_core::security::revocation_store: revocation store loaded count=0 path=./security/revoked_tokens.enc
+2026-05-09T03:32:14.764475Z  INFO security_core::service::secrets: tenant secrets key loaded
+2026-05-09T03:32:14.764497Z  INFO security_core: gRPC server ready addr=0.0.0.0:50051
+2026-05-09T03:32:14.764512Z  WARN security_core: running in insecure dev mode — no mTLS
+2026-05-09T03:32:14.764527Z  INFO security_core::infrastructure::grpc::server: gRPC server listening on 0.0.0.0:50051 (insecure)
+2026-05-09T03:33:17.963680Z  INFO security_core::infrastructure::grpc::handler: get_all_users completed total=0
+2026-05-09T03:33:18.275223Z  INFO security_core::infrastructure::grpc::handler: get_all_users completed total=0
+2026-05-09T03:33:44.372677Z  WARN sqlx::pool::acquire: acquired connection, but time to acquire exceeded slow threshold aquired_after_secs=2.0731075 slow_acquire_threshold_secs=2.0
+2026-05-09T03:33:44.511137Z ERROR security_core::service::secrets: db error upserting secret tenant_id=0ae3af2d-f210-4d88-8948-a6a24daf4501 error=Database error: no rows returned by a query that expected to return at least one row
+2026-05-09T03:33:44.511190Z  WARN security_core::infrastructure::grpc::handler: store schema name failed tenant_id=0ae3af2d-f210-4d88-8948-a6a24daf4501 error=database error: Database error: no rows returned by a query that expected to return at least one row
+2026-05-09T03:37:06.933885Z  INFO security_core: security-core starting version="0.1.0" log_dir=logs
+2026-05-09T03:37:09.007159Z  WARN sqlx::pool::acquire: acquired connection, but time to acquire exceeded slow threshold aquired_after_secs=2.0719125 slow_acquire_threshold_secs=2.0
+2026-05-09T03:37:09.007225Z  INFO security_core: database pool ready
+2026-05-09T03:37:09.007952Z  INFO security_core::service::token: PASETO keys loaded
+2026-05-09T03:37:09.008383Z  INFO security_core::security::revocation_store: revocation store loaded count=0 path=./security/revoked_tokens.enc
+2026-05-09T03:37:09.008426Z  INFO security_core::service::secrets: tenant secrets key loaded
+2026-05-09T03:37:09.008457Z  INFO security_core: gRPC server ready addr=0.0.0.0:50051
+2026-05-09T03:37:09.008473Z  WARN security_core: running in insecure dev mode — no mTLS
+2026-05-09T03:37:09.008490Z  INFO security_core::infrastructure::grpc::server: gRPC server listening on 0.0.0.0:50051 (insecure)
+2026-05-09T03:37:12.503153Z  WARN security_core::infrastructure::grpc::handler: auto-create tenant failed on register error=Conflict: error returned from database: duplicate key value violates unique constraint "tenants_name_key"
+2026-05-09T03:37:22.657305Z  INFO security_core::infrastructure::grpc::handler: get_all_users completed total=0
+2026-05-09T03:37:41.179427Z  WARN security_core::infrastructure::grpc::handler: auto-create tenant failed on register error=Conflict: error returned from database: duplicate key value violates unique constraint "tenants_name_key"
+2026-05-09T03:37:50.564367Z  INFO security_core::infrastructure::grpc::handler: get_all_users completed total=0
+2026-05-09T03:43:00.060746Z  INFO security_core: security-core starting version="0.1.0" log_dir=logs
+2026-05-09T03:43:02.161730Z  WARN sqlx::pool::acquire: acquired connection, but time to acquire exceeded slow threshold aquired_after_secs=2.0997145 slow_acquire_threshold_secs=2.0
+2026-05-09T03:43:02.161799Z  INFO security_core: database pool ready
+2026-05-09T03:43:02.162533Z  INFO security_core::service::token: PASETO keys loaded
+2026-05-09T03:43:02.162938Z  INFO security_core::security::revocation_store: revocation store loaded count=0 path=./security/revoked_tokens.enc
+2026-05-09T03:43:02.162975Z  INFO security_core::service::secrets: tenant secrets key loaded
+2026-05-09T03:43:02.163001Z  INFO security_core: gRPC server ready addr=0.0.0.0:50051
+2026-05-09T03:43:02.163015Z  WARN security_core: running in insecure dev mode — no mTLS
+2026-05-09T03:43:02.163032Z  INFO security_core::infrastructure::grpc::server: gRPC server listening on 0.0.0.0:50051 (insecure)
+2026-05-09T03:46:56.730877Z  WARN sqlx::pool::acquire: acquired connection, but time to acquire exceeded slow threshold aquired_after_secs=2.0860472 slow_acquire_threshold_secs=2.0
+2026-05-09T03:46:56.867454Z  INFO security_core::service::secrets: secret created tenant_id=d4c8e67e-085c-474d-b12e-56bad74251b4
+2026-05-09T03:46:56.867510Z  INFO security_core::infrastructure::grpc::handler: tenant provisioned on register tenant_id=d4c8e67e-085c-474d-b12e-56bad74251b4 schema=t_d4c8e67e085c474db12e56bad74251b4
+2026-05-09T03:46:57.239453Z  INFO security_core::infrastructure::grpc::handler: user registered user_id=e8c00e1f-bdf0-483f-8c3c-0ecbb0428a31
+2026-05-09T03:47:19.376075Z  INFO security_core::service::auth: login successful user_id=e8c00e1f-bdf0-483f-8c3c-0ecbb0428a31 email=string1
