@@ -1,0 +1,153 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n            INSERT INTO auth.history (\n                actor_id, actor_email, action,\n                target_user_id, sign_doc_id, token_id, key_id,\n                ip_address, user_agent, metadata,\n                success, error_message\n            )\n            VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12)\n            RETURNING\n                id,\n                actor_id,\n                actor_email,\n                action          AS \"action: _\",\n                target_user_id,\n                sign_doc_id,\n                token_id,\n                key_id,\n                ip_address      AS \"ip_address: _\",\n                user_agent,\n                metadata        AS \"metadata: _\",\n                success,\n                error_message,\n                created_at\n            ",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "id",
+        "type_info": "Int8"
+      },
+      {
+        "ordinal": 1,
+        "name": "actor_id",
+        "type_info": "Uuid"
+      },
+      {
+        "ordinal": 2,
+        "name": "actor_email",
+        "type_info": "Text"
+      },
+      {
+        "ordinal": 3,
+        "name": "action: _",
+        "type_info": {
+          "Custom": {
+            "name": "auth.history_action",
+            "kind": {
+              "Enum": [
+                "login",
+                "logout",
+                "login_failed",
+                "token_refreshed",
+                "token_revoked",
+                "password_changed",
+                "account_locked",
+                "account_unlocked",
+                "register",
+                "password_reset_requested",
+                "password_reset_completed",
+                "role_changed",
+                "user_deleted"
+              ]
+            }
+          }
+        }
+      },
+      {
+        "ordinal": 4,
+        "name": "target_user_id",
+        "type_info": "Uuid"
+      },
+      {
+        "ordinal": 5,
+        "name": "sign_doc_id",
+        "type_info": "Uuid"
+      },
+      {
+        "ordinal": 6,
+        "name": "token_id",
+        "type_info": "Uuid"
+      },
+      {
+        "ordinal": 7,
+        "name": "key_id",
+        "type_info": "Uuid"
+      },
+      {
+        "ordinal": 8,
+        "name": "ip_address: _",
+        "type_info": "Inet"
+      },
+      {
+        "ordinal": 9,
+        "name": "user_agent",
+        "type_info": "Text"
+      },
+      {
+        "ordinal": 10,
+        "name": "metadata: _",
+        "type_info": "Jsonb"
+      },
+      {
+        "ordinal": 11,
+        "name": "success",
+        "type_info": "Bool"
+      },
+      {
+        "ordinal": 12,
+        "name": "error_message",
+        "type_info": "Text"
+      },
+      {
+        "ordinal": 13,
+        "name": "created_at",
+        "type_info": "Timestamptz"
+      }
+    ],
+    "parameters": {
+      "Left": [
+        "Uuid",
+        "Text",
+        {
+          "Custom": {
+            "name": "auth.history_action",
+            "kind": {
+              "Enum": [
+                "login",
+                "logout",
+                "login_failed",
+                "token_refreshed",
+                "token_revoked",
+                "password_changed",
+                "account_locked",
+                "account_unlocked",
+                "register",
+                "password_reset_requested",
+                "password_reset_completed",
+                "role_changed",
+                "user_deleted"
+              ]
+            }
+          }
+        },
+        "Uuid",
+        "Uuid",
+        "Uuid",
+        "Uuid",
+        "Inet",
+        "Text",
+        "Jsonb",
+        "Bool",
+        "Text"
+      ]
+    },
+    "nullable": [
+      false,
+      true,
+      true,
+      false,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      false,
+      true,
+      false
+    ]
+  },
+  "hash": "7f069b45faf433206f58a1c9d9f53cbdc42df51eaf265f28125e1cfd56133b70"
+}

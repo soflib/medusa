@@ -1,0 +1,158 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n            INSERT INTO auth.users (tenant_id, email, username, password_hash, role, status, full_name, phone)\n            VALUES ($1, $2, $3, $4, $5, 'active', $6, $7)\n            RETURNING\n                id, tenant_id,\n                email, username, password_hash,\n                role    AS \"role: _\",\n                status  AS \"status: _\",\n                full_name, phone,\n                failed_attempts, locked_until,\n                last_login_at, last_login_ip AS \"last_login_ip: _\",\n                created_at, updated_at, deleted_at\n            ",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "id",
+        "type_info": "Uuid"
+      },
+      {
+        "ordinal": 1,
+        "name": "tenant_id",
+        "type_info": "Uuid"
+      },
+      {
+        "ordinal": 2,
+        "name": "email",
+        "type_info": "Text"
+      },
+      {
+        "ordinal": 3,
+        "name": "username",
+        "type_info": "Text"
+      },
+      {
+        "ordinal": 4,
+        "name": "password_hash",
+        "type_info": "Text"
+      },
+      {
+        "ordinal": 5,
+        "name": "role: _",
+        "type_info": {
+          "Custom": {
+            "name": "auth.user_role",
+            "kind": {
+              "Enum": [
+                "admin",
+                "user",
+                "moderator",
+                "arquitecto",
+                "finanzas",
+                "reportes"
+              ]
+            }
+          }
+        }
+      },
+      {
+        "ordinal": 6,
+        "name": "status: _",
+        "type_info": {
+          "Custom": {
+            "name": "auth.user_status",
+            "kind": {
+              "Enum": [
+                "active",
+                "inactive",
+                "banned",
+                "pending"
+              ]
+            }
+          }
+        }
+      },
+      {
+        "ordinal": 7,
+        "name": "full_name",
+        "type_info": "Text"
+      },
+      {
+        "ordinal": 8,
+        "name": "phone",
+        "type_info": "Text"
+      },
+      {
+        "ordinal": 9,
+        "name": "failed_attempts",
+        "type_info": "Int2"
+      },
+      {
+        "ordinal": 10,
+        "name": "locked_until",
+        "type_info": "Timestamptz"
+      },
+      {
+        "ordinal": 11,
+        "name": "last_login_at",
+        "type_info": "Timestamptz"
+      },
+      {
+        "ordinal": 12,
+        "name": "last_login_ip: _",
+        "type_info": "Inet"
+      },
+      {
+        "ordinal": 13,
+        "name": "created_at",
+        "type_info": "Timestamptz"
+      },
+      {
+        "ordinal": 14,
+        "name": "updated_at",
+        "type_info": "Timestamptz"
+      },
+      {
+        "ordinal": 15,
+        "name": "deleted_at",
+        "type_info": "Timestamptz"
+      }
+    ],
+    "parameters": {
+      "Left": [
+        "Uuid",
+        "Text",
+        "Text",
+        "Text",
+        {
+          "Custom": {
+            "name": "auth.user_role",
+            "kind": {
+              "Enum": [
+                "admin",
+                "user",
+                "moderator",
+                "arquitecto",
+                "finanzas",
+                "reportes"
+              ]
+            }
+          }
+        },
+        "Text",
+        "Text"
+      ]
+    },
+    "nullable": [
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      true,
+      false,
+      true,
+      true,
+      true,
+      false,
+      false,
+      true
+    ]
+  },
+  "hash": "84fac6968399d29b51da8605d57cdca4cecb8d7204ebcd369af2b1fc7cfef530"
+}

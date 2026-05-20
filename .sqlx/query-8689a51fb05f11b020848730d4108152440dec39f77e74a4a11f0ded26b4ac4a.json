@@ -1,0 +1,80 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n            INSERT INTO auth.tenant_secrets (tenant_id, kind, encrypted_value)\n            VALUES ($1, $2, $3)\n            RETURNING id, tenant_id,\n                      kind      AS \"kind: SecretKind\",\n                      encrypted_value,\n                      created_at, updated_at, deleted_at\n            ",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "id",
+        "type_info": "Uuid"
+      },
+      {
+        "ordinal": 1,
+        "name": "tenant_id",
+        "type_info": "Uuid"
+      },
+      {
+        "ordinal": 2,
+        "name": "kind: SecretKind",
+        "type_info": {
+          "Custom": {
+            "name": "auth.secret_kind",
+            "kind": {
+              "Enum": [
+                "database_connection",
+                "tenant_schema"
+              ]
+            }
+          }
+        }
+      },
+      {
+        "ordinal": 3,
+        "name": "encrypted_value",
+        "type_info": "Bytea"
+      },
+      {
+        "ordinal": 4,
+        "name": "created_at",
+        "type_info": "Timestamptz"
+      },
+      {
+        "ordinal": 5,
+        "name": "updated_at",
+        "type_info": "Timestamptz"
+      },
+      {
+        "ordinal": 6,
+        "name": "deleted_at",
+        "type_info": "Timestamptz"
+      }
+    ],
+    "parameters": {
+      "Left": [
+        "Uuid",
+        {
+          "Custom": {
+            "name": "auth.secret_kind",
+            "kind": {
+              "Enum": [
+                "database_connection",
+                "tenant_schema"
+              ]
+            }
+          }
+        },
+        "Bytea"
+      ]
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true
+    ]
+  },
+  "hash": "8689a51fb05f11b020848730d4108152440dec39f77e74a4a11f0ded26b4ac4a"
+}

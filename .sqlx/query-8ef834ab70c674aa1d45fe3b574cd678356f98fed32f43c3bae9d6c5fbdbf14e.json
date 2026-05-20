@@ -1,0 +1,76 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n            SELECT id, name,\n                   status AS \"status: _\",\n                   privat_db, payment_id,\n                   created_at, updated_at, deleted_at\n            FROM auth.tenants\n            WHERE id = $1 AND deleted_at IS NULL\n            ",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "id",
+        "type_info": "Uuid"
+      },
+      {
+        "ordinal": 1,
+        "name": "name",
+        "type_info": "Text"
+      },
+      {
+        "ordinal": 2,
+        "name": "status: _",
+        "type_info": {
+          "Custom": {
+            "name": "auth.user_status",
+            "kind": {
+              "Enum": [
+                "active",
+                "inactive",
+                "banned",
+                "pending"
+              ]
+            }
+          }
+        }
+      },
+      {
+        "ordinal": 3,
+        "name": "privat_db",
+        "type_info": "Bool"
+      },
+      {
+        "ordinal": 4,
+        "name": "payment_id",
+        "type_info": "Text"
+      },
+      {
+        "ordinal": 5,
+        "name": "created_at",
+        "type_info": "Timestamptz"
+      },
+      {
+        "ordinal": 6,
+        "name": "updated_at",
+        "type_info": "Timestamptz"
+      },
+      {
+        "ordinal": 7,
+        "name": "deleted_at",
+        "type_info": "Timestamptz"
+      }
+    ],
+    "parameters": {
+      "Left": [
+        "Uuid"
+      ]
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      true
+    ]
+  },
+  "hash": "8ef834ab70c674aa1d45fe3b574cd678356f98fed32f43c3bae9d6c5fbdbf14e"
+}

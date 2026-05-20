@@ -1,0 +1,79 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n            SELECT id, tenant_id,\n                   kind      AS \"kind: SecretKind\",\n                   encrypted_value,\n                   created_at, updated_at, deleted_at\n            FROM auth.tenant_secrets\n            WHERE tenant_id = $1\n              AND kind       = $2\n              AND deleted_at IS NULL\n            ",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "id",
+        "type_info": "Uuid"
+      },
+      {
+        "ordinal": 1,
+        "name": "tenant_id",
+        "type_info": "Uuid"
+      },
+      {
+        "ordinal": 2,
+        "name": "kind: SecretKind",
+        "type_info": {
+          "Custom": {
+            "name": "auth.secret_kind",
+            "kind": {
+              "Enum": [
+                "database_connection",
+                "tenant_schema"
+              ]
+            }
+          }
+        }
+      },
+      {
+        "ordinal": 3,
+        "name": "encrypted_value",
+        "type_info": "Bytea"
+      },
+      {
+        "ordinal": 4,
+        "name": "created_at",
+        "type_info": "Timestamptz"
+      },
+      {
+        "ordinal": 5,
+        "name": "updated_at",
+        "type_info": "Timestamptz"
+      },
+      {
+        "ordinal": 6,
+        "name": "deleted_at",
+        "type_info": "Timestamptz"
+      }
+    ],
+    "parameters": {
+      "Left": [
+        "Uuid",
+        {
+          "Custom": {
+            "name": "auth.secret_kind",
+            "kind": {
+              "Enum": [
+                "database_connection",
+                "tenant_schema"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true
+    ]
+  },
+  "hash": "ebd7719b8ea9060d0bd8937aee4a4c7954d99a09cc43dbf3c02d17a4e21abf41"
+}

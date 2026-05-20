@@ -1,5 +1,5 @@
 # ─── Build ───────────────────────────────────────────────────────────────────
-FROM rust:1.87-slim-bookworm AS builder
+FROM rust:1.95-slim-bookworm AS builder
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
     protobuf-compiler \
@@ -20,6 +20,7 @@ RUN mkdir src && echo "fn main() {}" > src/main.rs \
 
 # Layer 2: application source
 # Prerequisite: run `cargo sqlx prepare` to generate .sqlx/ before building this image
+COPY .sqlx/ .sqlx/
 COPY src/ src/
 RUN touch src/main.rs \
     && cargo build --release --locked

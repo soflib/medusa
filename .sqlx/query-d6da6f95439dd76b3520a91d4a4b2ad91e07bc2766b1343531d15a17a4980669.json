@@ -1,0 +1,64 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n            SELECT id, tenant_id, payment_id, payment_method,\n                   payment_plan, payment_plan_end,\n                   created_at, updated_at\n            FROM auth.tenant_payments\n            WHERE tenant_id = $1\n            ORDER BY created_at DESC\n            LIMIT 1\n            ",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "id",
+        "type_info": "Uuid"
+      },
+      {
+        "ordinal": 1,
+        "name": "tenant_id",
+        "type_info": "Uuid"
+      },
+      {
+        "ordinal": 2,
+        "name": "payment_id",
+        "type_info": "Text"
+      },
+      {
+        "ordinal": 3,
+        "name": "payment_method",
+        "type_info": "Text"
+      },
+      {
+        "ordinal": 4,
+        "name": "payment_plan",
+        "type_info": "Text"
+      },
+      {
+        "ordinal": 5,
+        "name": "payment_plan_end",
+        "type_info": "Timestamptz"
+      },
+      {
+        "ordinal": 6,
+        "name": "created_at",
+        "type_info": "Timestamptz"
+      },
+      {
+        "ordinal": 7,
+        "name": "updated_at",
+        "type_info": "Timestamptz"
+      }
+    ],
+    "parameters": {
+      "Left": [
+        "Uuid"
+      ]
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false
+    ]
+  },
+  "hash": "d6da6f95439dd76b3520a91d4a4b2ad91e07bc2766b1343531d15a17a4980669"
+}

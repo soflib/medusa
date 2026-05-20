@@ -1,0 +1,121 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n            SELECT\n                id, actor_id, actor_email,\n                action         AS \"action: _\",\n                target_user_id, sign_doc_id, token_id, key_id,\n                ip_address     AS \"ip_address: _\",\n                user_agent,\n                metadata       AS \"metadata: _\",\n                success, error_message, created_at\n            FROM auth.history\n            WHERE id = $1\n            ",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "id",
+        "type_info": "Int8"
+      },
+      {
+        "ordinal": 1,
+        "name": "actor_id",
+        "type_info": "Uuid"
+      },
+      {
+        "ordinal": 2,
+        "name": "actor_email",
+        "type_info": "Text"
+      },
+      {
+        "ordinal": 3,
+        "name": "action: _",
+        "type_info": {
+          "Custom": {
+            "name": "auth.history_action",
+            "kind": {
+              "Enum": [
+                "login",
+                "logout",
+                "login_failed",
+                "token_refreshed",
+                "token_revoked",
+                "password_changed",
+                "account_locked",
+                "account_unlocked",
+                "register",
+                "password_reset_requested",
+                "password_reset_completed",
+                "role_changed",
+                "user_deleted"
+              ]
+            }
+          }
+        }
+      },
+      {
+        "ordinal": 4,
+        "name": "target_user_id",
+        "type_info": "Uuid"
+      },
+      {
+        "ordinal": 5,
+        "name": "sign_doc_id",
+        "type_info": "Uuid"
+      },
+      {
+        "ordinal": 6,
+        "name": "token_id",
+        "type_info": "Uuid"
+      },
+      {
+        "ordinal": 7,
+        "name": "key_id",
+        "type_info": "Uuid"
+      },
+      {
+        "ordinal": 8,
+        "name": "ip_address: _",
+        "type_info": "Inet"
+      },
+      {
+        "ordinal": 9,
+        "name": "user_agent",
+        "type_info": "Text"
+      },
+      {
+        "ordinal": 10,
+        "name": "metadata: _",
+        "type_info": "Jsonb"
+      },
+      {
+        "ordinal": 11,
+        "name": "success",
+        "type_info": "Bool"
+      },
+      {
+        "ordinal": 12,
+        "name": "error_message",
+        "type_info": "Text"
+      },
+      {
+        "ordinal": 13,
+        "name": "created_at",
+        "type_info": "Timestamptz"
+      }
+    ],
+    "parameters": {
+      "Left": [
+        "Int8"
+      ]
+    },
+    "nullable": [
+      false,
+      true,
+      true,
+      false,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      false,
+      true,
+      false
+    ]
+  },
+  "hash": "a5b1957be9009c3921f38c97441f7abcf8f158e03fe80362383c52128c8fa650"
+}

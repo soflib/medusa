@@ -1,0 +1,12 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n            UPDATE auth.refresh_tokens\n            SET status = 'expired'\n            WHERE status     = 'active'\n              AND expires_at < NOW()\n            ",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Left": []
+    },
+    "nullable": []
+  },
+  "hash": "9ae3f91813e1fcfb654988933a2c512ce43e040e21f581946ccd3e66dffa71cb"
+}
